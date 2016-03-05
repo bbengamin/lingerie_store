@@ -2,7 +2,7 @@
 class ControllerCommonCurrency extends Controller {
 	public function index() {
 		$this->load->language('common/currency');
-
+        $this->currency->set('UAH');
 		$data['text_currency'] = $this->language->get('text_currency');
 
 		$data['action'] = $this->url->link('common/currency/currency', '', $this->request->server['HTTPS']);
@@ -25,7 +25,7 @@ class ControllerCommonCurrency extends Controller {
 				);
 			}
 		}
-
+        
 		if (!isset($this->request->get['route'])) {
 			$data['redirect'] = $this->url->link('common/home');
 		} else {
