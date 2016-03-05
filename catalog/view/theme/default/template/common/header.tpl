@@ -64,6 +64,12 @@
           <?php } ?>
         </div>
       </div>
+    <div class="static-pages-header">
+      <a href="/index.php?route=information/information&information_id=3">ДОСТАВКА И ОПЛАТА</a>
+      <a href="/index.php?route=information/information&information_id=4">КОНТАКТЫ</a>
+      <a href="/index.php?route=information/information&information_id=5">ВОПРОВЫ И ОТВЕТЫ</a>
+      <a href="/index.php?route=information/information&information_id=6">УСЛОВИЯ ОБМЕНА</a>
+    </div>
     </div>
   </div>
 </header>

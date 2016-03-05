@@ -783,3 +783,18 @@ h2.price {
     color: white;
     font-size: 14px;
 }
+.static-pages-header a{
+	text-decoration: none;
+    color: #767676;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 48px;
+    height: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.static-pages-header{
+    display: inline-block;
+    width: 650px;
+    float: right;
+}
