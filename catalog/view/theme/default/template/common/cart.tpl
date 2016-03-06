@@ -1,4 +1,4 @@
 <a href="<?php echo $cart; ?>"><span class="cart-header">
 <i class="fa fa-shopping-cart"></i>
-<?php echo $text_items; ?>
+<span id='cart-header-text'><?php echo $text_items; ?></span>
 </span></a>
