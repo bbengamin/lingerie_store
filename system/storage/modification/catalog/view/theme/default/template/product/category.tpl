@@ -26,7 +26,6 @@
       </div>
       <hr>
       <?php } ?>
-
       <?php if ($products) { ?>
       <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
       <div class="row">
