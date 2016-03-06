@@ -15,12 +15,11 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       
-
       <div class="row">
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
-        <?php $class = 'col-sm-8'; ?>
+        <?php $class = 'col-sm-6'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>
@@ -30,14 +29,14 @@
 
           <ul class="thumbnails">
             <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+            <li><a   href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
             <?php } ?>
            
           </ul>
-          <ul>
+          <ul  class="small-img">
              <?php if ($images) { ?>
             <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+            <li class="image-additional"><a class="thumbnail"  href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
             <?php } ?>
             <?php } ?>
           </ul>
@@ -47,102 +46,36 @@
 
 
           <?php } ?>
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
-            <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <?php } ?>
-            <?php if ($review_status) { ?>
-            <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
-            <?php } ?>
-          </ul>
+ 
           <div class="tab-content">
-            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
-            <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
-                <?php foreach ($attribute_groups as $attribute_group) { ?>
-                <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo $attribute['text']; ?></td>
-                  </tr>
-                  <?php } ?>
-                </tbody>
-                <?php } ?>
-              </table>
+                <?php if ($review_status) { ?>
+            <div class="rating" style="padding-top: 10px;">
+            <p>
+              <?php for ($i = 1; $i <= 5; $i++) { ?>
+              <?php if ($rating < $i) { ?>
+              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } else { ?>
+              <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+              <?php } ?>
+              <?php } ?>
+              <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="openbox('box-review'); return false"><?php echo $text_write; ?></a></p>
+            
             </div>
-            <?php } ?>
-            <?php if ($review_status) { ?>
-            <div class="tab-pane" id="tab-review">
-              <form class="form-horizontal" id="form-review">
-                <div id="review"></div>
-                <h2><?php echo $text_write; ?></h2>
-                <?php if ($review_guest) { ?>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                    <input type="text" name="name" value="" id="input-name" class="form-control" />
-                  </div>
-                </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
-                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                    <div class="help-block"><?php echo $text_note; ?></div>
-                  </div>
-                </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label"><?php echo $entry_rating; ?></label>
-                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                    <input type="radio" name="rating" value="1" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="2" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="3" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="4" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="5" />
-                    &nbsp;<?php echo $entry_good; ?></div>
-                </div>
-                <?php echo $captcha; ?>
-                <div class="buttons clearfix">
-                  <div class="pull-right">
-                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
-                  </div>
-                </div>
-                <?php } else { ?>
-                <?php echo $text_login; ?>
-                <?php } ?>
-              </form>
-            </div>
-            <?php } ?>
+          <?php } ?>
           </div>
         </div>
         
-
-
-
-
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
-        <?php $class = 'col-sm-4'; ?>
+        <?php $class = 'col-sm-6'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
-          <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
-          </div>
-          <h1><?php echo $heading_title; ?></h1>
+          
+          <h1 style="margin-top: 0px;"><?php echo $heading_title; ?></h1>
+
+      
+
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -319,41 +252,117 @@
               <div class="help-block" id="recurring-description"></div>
             </div>
             <?php } ?>
+
             <div class="form-group">
               <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
-              <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+              <input type="number" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" style="width: 90px;"/>
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+                
+          <div> <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block" ><?php echo $button_cart; ?></button></div>
+                           
             </div>
+             
+              <div class="tab-pane active" id="tab-description" style="border-top: 1px solid #EEE;"><?php echo $description; ?></div>
+
+            <?php if ($attribute_groups) { ?>
+            <div class="tab-pane" id="tab-specification">
+              <table class="table">
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                <thead>
+                 <!--  <tr>
+                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                  </tr> -->
+                </thead>
+                <tbody>
+                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                  <tr>
+                    <td><?php echo $attribute['name']; ?></td>
+                    <td><?php echo $attribute['text']; ?></td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+                <?php } ?>
+              </table>
+            </div>
+            <?php } ?>
+
             <?php if ($minimum > 1) { ?>
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
             <?php } ?>
           </div>
-          <?php if ($review_status) { ?>
-          <div class="rating">
-            <p>
-              <?php for ($i = 1; $i <= 5; $i++) { ?>
-              <?php if ($rating < $i) { ?>
-              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-              <?php } else { ?>
-              <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-              <?php } ?>
-              <?php } ?>
-              <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
-            <hr>
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
-            <!-- AddThis Button END -->
-          </div>
-          <?php } ?>
+             
         </div>
-
-
-
-
       </div>
+<script type="text/javascript">
+
+function openbox(id){
+    display = document.getElementById(id).style.display;
+
+    if(display=='none'){
+       document.getElementById(id).style.display='block';
+    }else{
+       document.getElementById(id).style.display='none';
+    }
+}
+</script>
+<div class = 'col-sm-12' style="border-top: 1px solid #EEE;">
+      <h3>Отзывы покупателей</h3>
+      
+      <div class = 'col-sm-6'>
+         <?php if ($review_status) { ?>
+            <div class="tab-pane" id="tab-review">
+              <form class="form-horizontal" id="form-review">
+                <div id="review"></div>
+
+                <div  id="box-review" style="display: none;">
+                <h2><?php echo $text_write; ?></h2>
+                <?php if ($review_guest) { ?>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                    <div class="help-block"><?php echo $text_note; ?></div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label"><?php echo $entry_rating; ?></label>
+                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+                    <input type="radio" name="rating" value="1" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="2" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="3" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="4" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="5" />
+                    &nbsp;<?php echo $entry_good; ?></div>
+                </div>
+                <?php echo $captcha; ?>
+                <div class="buttons clearfix">
+                  <div class="pull-right">
+                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                  </div>
+                </div>
+
+                </div>
+
+                <?php } else { ?>
+                <?php echo $text_login; ?>
+                <?php } ?>
+              </form>
+            </div>
+            <?php } ?>
+      </div>
+</div>
       <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
       <div class="row">

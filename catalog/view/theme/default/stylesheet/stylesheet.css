@@ -664,30 +664,58 @@ h2.price {
 		width: 33.33%;
 	}
 }
+ 
+.small-img {
+	list-style-type: none;
+	width: 20%;
+	display: inline-block;
+	float: right;
+	padding-left: 0px;
+}
 .thumbnails {
 	overflow: auto;
 	clear: both;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	width: 80%;
+    height: 777px;
+    display: inline-block;
+    margin-left: -20px;
+	border: none;
 }
 .thumbnails > li {
-	margin-left: 20px;
+	 height: 100%;
+    width: 100%;
+	/*margin-left: 20px;*/
 }
-.thumbnails {
-	margin-left: -20px;
-}
-.thumbnails > img {
-	width: 100%;
+.thumbnails >li> a{
+	 width: 100%;
+    height: 100%;
+	display: block;
+    background-color: #fff;
+    border: none !important	;}
+ 
+.thumbnails li>a> img {
+	height: 100%;
+    width: 100%;
 }
 .image-additional a {
 	margin-bottom: 20px;
-	padding: 5px;
+	
 	display: block;
-	border: 1px solid #ddd;
+	border: none;
+	/*border: 1px solid #ddd;*/
+	height: 100%;
+    width: 100%;
 }
 .image-additional {
-	max-width: 78px;
+	    width: 100%;
+    height: 50%;
+}
+.image-additional > a>img{
+    width: 80%;
+    height: 80%;
 }
 .thumbnails .image-additional {
 	float: left;
