@@ -14,6 +14,8 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+      
+
       <div class="row">
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -22,16 +24,28 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>
+          
+
+
+
           <ul class="thumbnails">
             <?php if ($thumb) { ?>
             <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
             <?php } ?>
-            <?php if ($images) { ?>
+           
+          </ul>
+          <ul>
+             <?php if ($images) { ?>
             <?php foreach ($images as $image) { ?>
             <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
             <?php } ?>
             <?php } ?>
           </ul>
+
+
+
+
+
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
@@ -113,6 +127,11 @@
             <?php } ?>
           </div>
         </div>
+        
+
+
+
+
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
@@ -128,10 +147,10 @@
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
             <?php } ?>
-            <li><?php echo $text_model; ?> <?php echo $model; ?></li>
+            <!-- <li><?php echo $text_model; ?> <?php echo $model; ?></li>
             <?php if ($reward) { ?>
             <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
-            <?php } ?>
+            <?php } ?> -->
             <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
           </ul>
           <?php if ($price) { ?>
@@ -146,9 +165,9 @@
               <h2><?php echo $special; ?></h2>
             </li>
             <?php } ?>
-            <?php if ($tax) { ?>
+            <!-- <?php if ($tax) { ?>
             <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
-            <?php } ?>
+            <?php } ?> -->
             <?php if ($points) { ?>
             <li><?php echo $text_points; ?> <?php echo $points; ?></li>
             <?php } ?>
@@ -330,6 +349,10 @@
           </div>
           <?php } ?>
         </div>
+
+
+
+
       </div>
       <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
