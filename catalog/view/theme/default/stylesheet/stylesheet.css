@@ -33,7 +33,7 @@ h6 {
 	font-size: 10.2px;
 }
 a {
-	color: #23a1d1;
+	color: #008B8B;
 }
 a:hover {
 	text-decoration: none;
@@ -195,10 +195,10 @@ div.required .control-label:before {
 }
 /* menu */
 #menu {
-	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+	background-color: #008B8B;
+	/*background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
 	background-repeat: repeat-x;
-	border-color: #1f90bb #1f90bb #145e7a;
+	border-color: #1f90bb #1f90bb #145e7a;*/
 	min-height: 40px;
 /*    background-color: #EEE;
     background-image: linear-gradient(to bottom, #EEE, #D9D7D7);
