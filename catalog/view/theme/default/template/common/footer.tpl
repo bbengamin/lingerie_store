@@ -1,31 +1,34 @@
 <footer>
   <div class="container">
     <div class="row">
-      <?php if ($informations) { ?>
+      <!-- <?php if ($informations) { ?> -->
       <div class="col-sm-3">
-        <h5><?php echo $text_information; ?></h5>
+        <h5>Информация</h5>
         <ul class="list-unstyled">
-          <?php foreach ($informations as $information) { ?>
+         <!--  <?php foreach ($informations as $information) { ?>
           <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-          <?php } ?>
+          <?php } ?> -->
+          <li><a href="/index.php?route=information/information&information_id=9">О нас</a></li>
+          <li><a href="/index.php?route=information/information&information_id=4">Контакты</a></li>
+          <li><a href="/index.php?route=information/information&information_id=10">Новости</a></li>
         </ul>
       </div>
-      <?php } ?>
+      <!-- <?php } ?> -->
       <div class="col-sm-3">
-        <h5><?php echo $text_service; ?></h5>
+        <h5>Служба поддержки</h5>
         <ul class="list-unstyled">
-          <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
-          <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-          <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+          <li><a href="/index.php?route=information/information&information_id=3">Способы оплаты</a></li>
+          <li><a href="/index.php?route=information/information&information_id=3">Доставка</a></li>
+          <li><a href="/index.php?route=information/information&information_id=6">Возврат и обмен</a></li>
+          <li><a href="/index.php?route=information/information&information_id=5">Как сделать заказ</a></li>
         </ul>
       </div>
       <div class="col-sm-3">
-        <h5><?php echo $text_extra; ?></h5>
+        <h5>Дополнительно</h5>
         <ul class="list-unstyled">
-          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-          <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
-          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
-          <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
+          <li><a href="<?php echo $manufacturer; ?>">Производители</a></li>
+          <li><a href="/index.php?route=information/information&information_id=7">Как подобрать размер</a></li>
+          <li><a href="/index.php?route=information/information&information_id=8">Сотрудничество</a></li>
         </ul>
       </div>
       <div class="col-sm-3">
