@@ -1,0 +1,210 @@
+2016-03-06 15:07:37 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+Modification::refresh - Processing 'Bugfixes for ControllerUserUserPermission'
+Modification::refresh - Done 'Bugfixes for ControllerUserUserPermission'
+----------------------------------------------------------------
+Modification::refresh - Processing 'Mega Filter PRO'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_left.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_right.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/content_top.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$query = $this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict )) AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$cache = md5(http_build_query($data));'
+Modification::refresh - Done 'Mega Filter PRO'
+----------------------------------------------------------------
+2016-03-06 15:07:53 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+Modification::refresh - Processing 'Bugfixes for ControllerUserUserPermission'
+Modification::refresh - Done 'Bugfixes for ControllerUserUserPermission'
+----------------------------------------------------------------
+Modification::refresh - Processing 'Mega Filter PRO'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_left.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_right.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/content_top.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$query = $this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict )) AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$cache = md5(http_build_query($data));'
+Modification::refresh - Done 'Mega Filter PRO'
+----------------------------------------------------------------
+2016-03-06 15:12:45 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+Modification::refresh - Processing 'Bugfixes for ControllerUserUserPermission'
+Modification::refresh - Done 'Bugfixes for ControllerUserUserPermission'
+----------------------------------------------------------------
+Modification::refresh - Processing 'Mega Filter PRO'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_left.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_right.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/content_top.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$query = $this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict )) AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$cache = md5(http_build_query($data));'
+Modification::refresh - Done 'Mega Filter PRO'
+----------------------------------------------------------------
+2016-03-06 15:15:44 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+Modification::refresh - Processing 'Bugfixes for ControllerUserUserPermission'
+Modification::refresh - Done 'Bugfixes for ControllerUserUserPermission'
+----------------------------------------------------------------
+Modification::refresh - Processing 'Mega Filter PRO'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_left.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_right.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/content_top.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$query = $this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict )) AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$cache = md5(http_build_query($data));'
+Modification::refresh - Done 'Mega Filter PRO'
+----------------------------------------------------------------
+2016-03-11 7:40:42 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+Modification::refresh - Processing 'Bugfixes for ControllerUserUserPermission'
+Modification::refresh - Done 'Bugfixes for ControllerUserUserPermission'
+----------------------------------------------------------------
+Modification::refresh - Processing 'Mega Filter PRO'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_left.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/column_right.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/controller/common/content_top.php'
+  search = 'if (isset($part[1]) && isset($setting[$part[1]])) {'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$query = $this->db->query("SELECT COUNT(DISTINCT ps.product_id) AS total FROM " . DB_PREFIX . "product_special ps LEFT JOIN " . DB_PREFIX . "product p ON (ps.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict )) AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW()))");'
+Modification::refresh - SEARCH NOT FOUND (SKIPPED):
+  file name = '/var/www/html/catalog/model/catalog/product.php'
+  search = '$cache = md5(http_build_query($data));'
+Modification::refresh - Done 'Mega Filter PRO'
+----------------------------------------------------------------
